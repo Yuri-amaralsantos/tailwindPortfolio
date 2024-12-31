@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Responsive Page with JetBrains Mono</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Font -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@400;500;700&family=JetBrains+Mono:wght@400;500;700&display=swap"
+        rel="stylesheet" />
+    <script>
+        // Add custom Tailwind configuration
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        jetmono: ["JetBrains Mono", "monospace"],
+                        chakra: ["Chakra Petch", "sans-serif"],
+                    },
+                    screens: {
+                        md: '930px',  // Medium screens start at 801px
+                    },
+                    colors: {
+                        'neon-blue': '#9AD4ED',
+                        'neon-green': '#33FFCC',
+                        'neon-red': '#E81B5C',
+                        'dark-blue': '#0A192F',
+                        'grey-blue': '#B7C4CA',
+                        'medium-blue': '#172B48'
+                    },
+                },
+            },
+        };
+    </script>
+</head>
+
+<body class="bg-dark-blue text-gray-800">
+    <!-- Navbar -->
+    <nav>
+        <div class="container mx-auto flex justify-between items-center pb-4 ">
+
+            <div class=" hidden md:flex relative w-[390px] h-[88px] bg-neon-blue flex items-center justify-center p-12 overflow-hidden"
+                style="
+          clip-path: polygon(0 0,100% 0,100% 75%,90% 100%,10% 100%,0% 75%);"><span
+                    class="absolute w-[97%] h-[100%] bg-dark-blue" style="
+            clip-path: polygon(0 0,100% 0,100% 68%,90% 95%,10% 95%,0% 68%);"></span>
+                <div class=" space-x-8 text-base z-0 font-jetmono text-neon-green">
+                    <a href="#main"class="hover:text-blue-600">INICIO</a>
+                    <a href="#sobre" class="hover:text-blue-600">SOBRE</a>
+                    <a href="#projetos" class="hover:text-blue-600">PROJETOS</a>
+                </div>
+            </div>
+
+
+            <div class=" hidden md:flex relative w-[390px] h-[88px] bg-neon-blue flex items-center justify-center p-12 overflow-hidden"
+                style="
+          clip-path: polygon(0 0,100% 0,100% 75%,90% 100%,10% 100%,0% 75%);"><span
+                    class="absolute w-[97%] h-[100%] bg-dark-blue" style="
+            clip-path: polygon(0 0,100% 0,100% 68%,90% 95%,10% 95%,0% 68%);"></span>
+                <div class=" flex flex-row z-0 space-x-8">
+                    <a href="https://www.linkedin.com/in/yuri-amaral-santos-17264a25b" target="_blank">
+                        <svg width="43" height="42" viewBox="0 0 43 42" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M33.6216 5.25H8.84782C6.89247 5.25 5.30872 6.81625 5.30872 8.75V33.25C5.30872 35.1838 6.89247 36.75 8.84782 36.75H33.6216C35.5769 36.75 37.1607 35.1838 37.1607 33.25V8.75C37.1607 6.81625 35.5769 5.25 33.6216 5.25ZM13.6929 29.75C12.4595 29.75 11.4597 28.7612 11.4597 27.5415V19.7067C11.4615 18.4887 12.4612 17.5 13.6929 17.5C14.9262 17.5 15.926 18.4888 15.926 19.7085V27.5433C15.926 28.7613 14.9262 29.75 13.6929 29.75ZM13.615 15.2548C12.2507 15.2548 11.3394 14.3553 11.3394 13.1548C11.3394 11.9543 12.2489 11.0547 13.7654 11.0547C15.1297 11.0547 16.0411 11.9543 16.0411 13.1548C16.0411 14.3553 15.1315 15.2548 13.615 15.2548ZM29.6914 29.75C28.4987 29.75 27.5308 28.7928 27.5308 27.6133V23.0545C27.5308 21.203 26.3788 21 25.947 21C25.5152 21 24.0748 21.0612 24.0748 23.0545V27.6133C24.0748 28.7928 23.1069 29.75 21.9142 29.75H21.7709C20.5782 29.75 19.6102 28.7928 19.6102 27.6133V19.7085C19.6102 18.4888 20.61 17.5 21.8434 17.5C23.0768 17.5 24.0766 18.4888 24.0766 19.7085C24.0766 19.7085 24.5756 17.5 27.9661 17.5C30.1232 17.5 31.852 19.2097 31.852 23.0545V27.6133C31.852 28.7928 30.8841 29.75 29.6914 29.75Z"
+                                fill="#33FFCC" />
+                        </svg>
+                    </a>
+                    <a href="https://github.com/Yuri-amaralsantos?tab=repositories" target="_blank">
+                        <svg width="44" height="42" viewBox="0 0 44 42" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M20.0368 3.67501C11.8969 4.55001 5.34953 11.025 4.46475 18.9C3.57998 27.125 8.35777 34.475 15.6129 37.275C16.1438 37.45 16.6747 37.1 16.6747 36.4V33.6C16.6747 33.6 15.9668 33.775 15.0821 33.775C12.6047 33.775 11.543 31.675 11.366 30.45C11.1891 29.75 10.8351 29.225 10.3043 28.7C9.77341 28.525 9.59646 28.525 9.59646 28.35C9.59646 28 10.1273 28 10.3043 28C11.366 28 12.2508 29.225 12.6047 29.75C13.4895 31.15 14.5512 31.5 15.0821 31.5C15.7899 31.5 16.3208 31.325 16.6747 31.15C16.8516 29.925 17.3825 28.7 18.4442 28C14.3742 27.125 11.366 24.85 11.366 21C11.366 19.075 12.2508 17.15 13.4895 15.75C13.3125 15.4 13.1356 14.525 13.1356 13.3C13.1356 12.6 13.1356 11.725 13.4895 11.025C13.4895 10.675 13.8434 10.5 14.0203 10.5H14.1973C15.0821 10.675 16.8516 11.2 18.4442 12.775C19.506 12.425 20.7446 12.25 21.9833 12.25C23.222 12.25 24.4607 12.425 25.5224 12.775C27.115 11.2 29.0615 10.675 29.9463 10.5H30.1233C30.4772 10.5 30.6541 10.675 30.8311 11.025C30.8311 11.725 30.8311 12.6 30.8311 13.3C30.8311 14.7 30.6541 15.4 30.4772 15.75C31.7159 17.15 32.6006 18.9 32.6006 21C32.6006 24.85 29.5924 27.125 25.5224 28C26.5842 28.875 27.292 30.45 27.292 32.025V36.575C27.292 37.1 27.8229 37.625 28.5307 37.45C35.078 34.825 39.6789 28.525 39.6789 21.175C39.6789 10.675 30.6541 2.45001 20.0368 3.67501Z"
+                                fill="#33FFCC" />
+                        </svg>
+                    </a>
+                   <a href="mailto:yuri.a.santos12@gmail.com">
+                        <svg width="43" height="42" viewBox="0 0 43 42" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <g clip-path="url(#clip0_87_88)">
+                                <path
+                                    d="M35.8771 7H7.56425C5.61774 7 4.04284 8.575 4.04284 10.5L4.02515 31.5C4.02515 33.425 5.61774 35 7.56425 35H35.8771C37.8236 35 39.4162 33.425 39.4162 31.5V10.5C39.4162 8.575 37.8236 7 35.8771 7ZM35.1693 14.4375L22.6585 22.1725C22.0923 22.5225 21.3491 22.5225 20.7828 22.1725L8.27207 14.4375C7.82969 14.1575 7.56425 13.685 7.56425 13.1775C7.56425 12.005 8.85603 11.305 9.86467 11.9175L21.7207 19.25L33.5767 11.9175C34.5853 11.305 35.8771 12.005 35.8771 13.1775C35.8771 13.685 35.6117 14.1575 35.1693 14.4375Z"
+                                    fill="#33FFCC" />
+                            </g>
+                            <defs>
+                                <clipPath id="clip0_87_88">
+                                    <rect width="42.4693" height="42" fill="white" transform="translate(0.486084)" />
+                                </clipPath>
+                            </defs>
+                        </svg>
+                    </a>
+                    <a href="https://wa.me/21986026955" target="_blank">
+                        <svg width="43" height="42" viewBox="0 0 43 42" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M33.9924 8.62399C30.3082 4.97874 25.2826 3.13949 20.0058 3.55949C12.9117 4.12299 6.69349 9.00199 4.6125 15.7325C3.12608 20.5415 3.75073 25.5622 6.17148 29.7097L3.87814 37.24C3.65871 37.9627 4.32583 38.6435 5.06374 38.4492L13.0338 36.337C15.6156 37.73 18.5212 38.4632 21.4799 38.465H21.487C28.9102 38.465 35.769 33.9745 38.142 27.0182C40.453 20.2352 38.7436 13.328 33.9924 8.62399ZM30.1365 27.2195C29.7685 28.2397 27.9653 29.2232 27.1548 29.295C26.3444 29.3685 25.5852 29.6572 21.855 28.203C17.3657 26.453 14.5308 21.9012 14.3114 21.6107C14.0902 21.3185 12.5082 19.243 12.5082 17.094C12.5082 14.945 13.6496 13.888 14.0548 13.4522C14.4601 13.0147 14.9378 12.9062 15.2334 12.9062C15.5271 12.9062 15.8226 12.9062 16.0792 12.9167C16.3942 12.929 16.7428 12.9447 17.0737 13.671C17.4665 14.5355 18.3248 16.695 18.4345 16.9137C18.5442 17.1325 18.6185 17.388 18.4716 17.6785C18.3248 17.969 18.2504 18.151 18.031 18.4065C17.8098 18.662 17.5674 18.9752 17.3692 19.1712C17.148 19.3882 16.918 19.6262 17.1746 20.062C17.4329 20.4995 18.3177 21.9292 19.6307 23.086C21.3188 24.5735 22.7398 25.0337 23.1822 25.2542C23.6246 25.473 23.8812 25.4362 24.1395 25.144C24.3979 24.8535 25.2437 23.87 25.5375 23.4325C25.8312 22.995 26.1267 23.0685 26.532 23.2137C26.9372 23.359 29.1084 24.416 29.549 24.6347C29.9914 24.8535 30.2852 24.962 30.3949 25.144C30.5046 25.3242 30.5046 26.1992 30.1365 27.2195Z"
+                                fill="#33FFCC" />
+                        </svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <button class="ml-auto block md:hidden text-neon-blue">
+            <svg class="w-12 h-12 mr-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+            </svg>
+        </button>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="main" class="bg-dark-blue text-white py-16">
+        <div class="container mx-auto text-center flex flex-col items-center justify-center">
+            <h1 class="text-4xl md:text-6xl font-bold text-neon-green font-chakra">YURI AMARAL SANTOS</h1>
+            <p class=" text-lg text-neon-red font-jetmono">
+                Designer UI/UX, Desenvolvedor Fullstack, Deselvolvedor Mobile
+            </p>
+            <p class="mt-12 mx-10 md:mx-60 text-wrap break-words text-sm font-jetmono text-grey-blue">
+                Sou um desenvolvedor e designer apaixonado por criar experiências digitais excepcionais. Meu objetivo é
+                construir interfaces e aplicações intuitivas e de alta performance. Atualmente, estou focado em projetar
+                soluções acessíveis e centradas no usuário, tornando a tecnologia mais simples e impactante.
+            </p>
+            <div class="flex row space-x-12 mt-40 ml-200">
+                <button
+                    class="font-chakra w-[140px] h-[45px] bg-neon-blue flex items-center justify-center  text-black font-bold  "
+                    style="
+          clip-path: polygon(0 0, 90% 0%, 100% 30%, 100% 100%, 10% 100%, 0% 70%);">
+                    <a href="store/curriculoti.pdf" download>CURRICULO</a>
+                </button>
+                <button
+                    class="font-chakra w-[140px] h-[45px] bg-neon-blue flex items-center justify-center text-black font-bold  "
+                    style="
+          clip-path: polygon(0 0, 90% 0%, 100% 30%, 100% 100%, 10% 100%, 0% 70%);">
+                 <a href="mailto:yuri.a.santos12@gmail.com">CONTATO</a>
+                </button>
+            </div>
+
+        </div>
+    </section>
+    <section id="sobre" class="mx-10 bg-dark-blue text-white py-4 mt-28">
+        <div class=" md:ml-64 space-y-28">
+            <div>
+                <h2 class="text-4xl md:text-5xl  text-neon-green font-chakra text-left ">Sobre mim</h2>
+                <p class="text-grey-blue text-sm md:text-base md:mr-64  text-justify">Sou graduado em Análise e
+                    Desenvolvimento de Sistemas pela Universidade Estácio de Sá.
+                    Há mais de sete anos, dedico-me a projetos pessoais como desenvolvedor e designer, buscando
+                    constantemente aprimorar minhas habilidades e expandir meus conhecimentos.
+                    Desde projetos web até aplicativos mobile, meu objetivo é desenvolver soluções personalizadas que
+                    ofereçam experiências de usuário fluidas e intuitivas, com o melhor desempenho e usabilidade.
+                    Atualmente, na PlanBTech, atuo como designer UI/UX, onde me dedico a transformar ideias em
+                    interfaces intuitivas e visualmente atraentes.</p>
+            </div>
+            <div>
+                <h2 class="text-4xl md:text-5xl  text-neon-green font-chakra text-left ">Habilidades</h2>
+                <div class="grid grid-cols-3 md:grid-cols-12 mt-6 ">
+               <p class="text-neon-red text-lg">FrontEnd:</p>     
+        <img src="/images/svgtopng/React-Light.png" alt="Skill 1" width="50" height="50" />
+        <img src="/images/svgtopng/VueJS-Light.png" alt="Skill 1" width="50" height="50" />
+        <img src="/images/svgtopng/TailwindCSS-Light.png" alt="Skill 1" width="50" height="50" />
+                </div>
+                <div class="grid grid-cols-3 md:grid-cols-12 mt-6 ">
+               <p class="text-neon-red text-lg">Backend:</p>     
+        <img src="/images/svgtopng/Java-Light.png" alt="Skill 1" width="50" height="50" />
+        <img src="/images/svgtopng/JavaScript.png" alt="Skill 1" width="50" height="50" />
+        <img class="mt-6 md:mt-0" src="/images/svgtopng/DotNet.png" alt="Skill 1" width="50" height="50" />
+        <img class="mt-6 md:mt-0" src="/images/svgtopng/Python-Light.png" alt="Skill 1" width="50" height="50" />
+        <img class="mt-6 md:mt-0" src="/images/svgtopng/PHP-Light.png" alt="Skill 1" width="50" height="50" />
+                </div>
+                <div class="grid grid-cols-3 md:grid-cols-12 mt-6 ">
+                <p class="text-neon-red text-lg">Banco de Dados:</p>     
+        <img src="/images/svgtopng/MongoDB.png" alt="Skill 1" width="50" height="50" />
+        <img src="/images/svgtopng/PostgreSQL-Light.png" alt="Skill 1" width="50" height="50" />
+        <img src="/images/svgtopng/MySQL-Light.png" alt="Skill 1" width="50" height="50" />
+                </div>
+
+                <div class="grid grid-cols-3 md:grid-cols-12 mt-6 ">
+               <p class="text-neon-red text-lg">Design:</p>     
+        <img src="/images/svgtopng/Figma-Light.png" alt="Skill 1" width="50" height="50" />
+        <img src="/images/svgtopng/Illustrator.png" alt="Skill 1" width="50" height="50" />
+                </div>
+            
+                <div class="grid grid-cols-3 md:grid-cols-12 mt-6 ">
+               <p class="text-neon-red text-lg">Mobile:</p>     
+        <img src="/images/svgtopng/Dart-Light.png" alt="Skill 1" width="50" height="50" />
+        <img src="/images/svgtopng/Flutter-Light.png" alt="Skill 1" width="50" height="50" />
+                </div>
+            
+            <div class="grid grid-cols-3 md:grid-cols-12 mt-6 ">
+               <p class="text-neon-red text-lg">Outros:</p>     
+        <img src="/images/svgtopng/Docker.png" alt="Skill 1" width="50" height="50" />
+        <img src="/images/svgtopng/Github-Light.png" alt="Skill 1" width="50" height="50" />
+                </div>
+            </div>
+            <div>
+                <h2 class="text-4xl md:text-5xl  text-neon-green font-chakra text-left ">Experiências</h2>
+                <li class="mt-6 text-neon-blue">PlanBTech (2024-Atual): Designer UI/UX</li>
+            </div>
+        </div>
+
+
+
+    </section>
+
+
+
+    <section id="projetos" class="container mt-36 mb-24 mx-auto">
+        <h2 class="text-4xl md:text-5xl  text-neon-green font-chakra text-center mt-28">Projetos</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-20 flex flex-row justify-items-center mt-16">
+            <div class="md:ml-64 relative w-[350px] h-[250px] bg-neon-blue flex items-center justify-center p-12 overflow-hidden"
+                style="
+          clip-path: polygon(0 0,100% 0,100% 75%,90% 100%,10% 100%,0% 100%);"><span
+                    class="absolute w-[98%] h-[96%] bg-medium-blue" style="
+            clip-path: polygon(0 0,100% 0,100% 75%,90% 100%,0% 100%,0% 100%);"></span>
+                <div class="text-base z-0">
+                    <p class="text-4xl text-neon-red font-jetmono text-left">Titulo</p>
+                    <p class="text-base text-grey-blue font-jetmono text-left">Texto do aplicativo.</p>
+                    <p class="text-base text-neon-blue font-jetmono text-left">Ferramenta1-Ferramenta2</p>
+
+                </div>
+            </div>
+
+            <div class="md:mr-64 relative w-[350px] h-[250px] bg-neon-blue flex items-center justify-center p-12 overflow-hidden"
+                style="
+          clip-path: polygon(0 0,100% 0,100% 75%,90% 100%,10% 100%,0% 100%);"><span
+                    class="absolute w-[98%] h-[96%] bg-medium-blue" style="
+            clip-path: polygon(0 0,100% 0,100% 75%,90% 100%,0% 100%,0% 100%);"></span>
+                <div class="text-base z-0">
+                    <p class="text-4xl text-neon-red font-jetmono text-left">Titulo</p>
+                    <p class="text-base text-grey-blue font-jetmono text-left">Texto do aplicativo.</p>
+                    <p class="text-base text-neon-blue font-jetmono text-left">Ferramenta1-Ferramenta2</p>
+
+                </div>
+            </div>
+
+            <div class="md:ml-64 relative w-[350px] h-[250px] bg-neon-blue flex items-center justify-center p-12 overflow-hidden"
+                style="
+          clip-path: polygon(0 0,100% 0,100% 75%,90% 100%,10% 100%,0% 100%);"><span
+                    class="absolute w-[98%] h-[96%] bg-medium-blue" style="
+            clip-path: polygon(0 0,100% 0,100% 75%,90% 100%,0% 100%,0% 100%);"></span>
+                <div class="text-base z-0">
+                    <p class="text-4xl text-neon-red font-jetmono text-left">Titulo</p>
+                    <p class="text-base text-grey-blue font-jetmono text-left">Texto do aplicativo.</p>
+                    <p class="text-base text-neon-blue font-jetmono text-left">Ferramenta1-Ferramenta2</p>
+
+                </div>
+            </div>
+
+            <div class="md:mr-64 relative w-[350px] h-[250px] bg-neon-blue flex items-center justify-center p-12 overflow-hidden"
+                style="
+          clip-path: polygon(0 0,100% 0,100% 75%,90% 100%,10% 100%,0% 100%);"><span
+                    class="absolute w-[98%] h-[96%] bg-medium-blue" style="
+            clip-path: polygon(0 0,100% 0,100% 75%,90% 100%,0% 100%,0% 100%);"></span>
+                <div class="text-base z-0">
+                    <p class="text-4xl text-neon-red font-jetmono text-left">Titulo</p>
+                    <p class="text-base text-grey-blue font-jetmono text-left">Texto do aplicativo.</p>
+                    <p class="text-base text-neon-blue font-jetmono text-left">Ferramenta1-Ferramenta2</p>
+
+                </div>
+
+            </div>
+
+
+
+        </div>
+        <button
+            class="mx-auto mt-16 font-chakra w-[140px] h-[45px] bg-neon-blue flex items-center justify-center text-black font-bold  "
+            style="
+          clip-path: polygon(0 0, 90% 0%, 100% 30%, 100% 100%, 10% 100%, 0% 70%);">
+            <a href="https://github.com/Yuri-amaralsantos?tab=repositories" target="_blank">Ver mais </a>
+        </button>
+    </section>
+
+
+
+    <!-- Footer -->
+    <footer class=" text-white py-6">
+        <div class="text-neon-green container mx-auto text-center">
+            <p>Desenvolvido por Yuri Amaral Santos</p>
+        </div>
+    </footer>
+</body>
+
+</html>
